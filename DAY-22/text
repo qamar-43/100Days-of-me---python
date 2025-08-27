@@ -1,0 +1,102 @@
+🕹️ Day 22 - Pong Game: Short Notes
+🔹 What is Pong?
+Classic 2D arcade game with two paddles and a ball.
+Players bounce the ball; if a player misses, the opponent scores
+
+🧪 Tutorial Structure:
+-----------------------
+1.Create the screen
+Setup game window using Turtle.
+2.Create and move a paddle
+Responds to key presses.
+3.Create a second paddle
+For two-player mode.
+4.Create the ball
+Moves automatically.
+5.Collision with walls
+Ball bounces off top/bottom edges.
+6.Collision with paddles
+Ball bounces back when it hits a paddle.
+7.Detect scoring
+When ball passes a paddle.
+8.Scoreboard
+Tracks and displays player scores.
+
+---
+
+🎮 **Pong Game – Setting Up the Main Screen**
+
+### 🧱 **Goal**
+
+Create the initial game window using Python's `turtle` module.
+
+---
+
+## 🧪 **Steps Taken**
+
+1. **Imported `Screen` from the `turtle` module**
+
+   ```python
+   from turtle import Screen
+   ```
+
+2. **Created a screen object**
+
+   ```python
+   screen = Screen()
+   ```
+
+3. **Configured screen settings**
+
+   * Background color: **black**
+   * Width: **800 pixels**
+   * Height: **600 pixels**
+   * Title: `"Pong"`
+
+4. **Kept the window open using**
+
+   ```python
+   screen.exitonclick()
+   ```
+
+   * Prevents the window from closing immediately after running the program.
+
+---
+
+## ✅ **Final Code:**
+
+```python
+from turtle import Screen
+
+screen = Screen()
+screen.bgcolor("black")
+screen.setup(width=800, height=600)
+screen.title("Pong")
+screen.exitonclick()
+```
+
+
+1.Create a Paddle (Pong Game)
+🧱 Goal
+
+Build a paddle on the right side of the screen and make it respond to keyboard input (Up, Down).
+
+🎨 Paddle Setup
+
+Used turtle.Turtle() to create a square-shaped turtle.
+
+Changed color to white and stretched size to make it 20x100 pixels using shapesize().
+
+Disabled drawing with penup() and placed it at position (350, 0) using goto().
+
+🎮 Keyboard Control
+
+Enabled keyboard listening using screen.listen().
+
+Defined go_up() and go_down() functions to move paddle by ±20 pixels vertically using paddle.ycor() and paddle.goto().
+
+Bound "Up" and "Down" keys using screen.onkey().
+
+🚫 Disable Auto Animation
+
+Turned off screen’s automatic updates using screen.tracer(0).
